@@ -19,7 +19,14 @@ class Service():
     #     response_body = self.client.exec_post(user=user)
     #     resp.body = ujson.dumps(response_body)
     #
+class ServicePing():
+    def __init__(self):
+      pass
+
+    def on_get(self, req, resp):
+        pass
 
 # falcon.API instances are callable WSGI apps
 app = falcon.API()
 app.add_route('/', Service())
+app.add_route('/ping', ServicePing())

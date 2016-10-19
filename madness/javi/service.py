@@ -7,7 +7,7 @@ from madness.javi.client import Client
 
 class Service():
     def __init__(self):
-        pass
+        self.client = Client()
 
     def on_get(self, req, resp):
         data = self.client.set_get(data=req.params)
